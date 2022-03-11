@@ -1,0 +1,238 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1,
+h3 {
+	color: #333;
+	font-weight: 600;
+	opacity: 0.8;
+}
+h1 {
+	font-size: 3rem;
+}
+h2,
+p {
+	color: #222;
+	font-weight: 500;
+	opacity: 0.8;
+}
+
+main {
+	font-family: poppins;
+	min-height: 100vh;
+	/* background: linear-gradient(to right top, #65dfc9, #6cdbeb); */
+	background-color: #2f4353;
+	background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+	background-color: #5b6467;
+	background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.glass {
+	background: white;
+	min-height: 80vh;
+	width: 60%;
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.6),
+		rgba(255, 255, 255, 0.3)
+	);
+	border: 1px solid white;
+	border-radius: 2rem;
+	z-index: 2;
+	/* background-color: black; */
+	backdrop-filter: blur(2rem);
+	display: flex;
+}
+.circle1,
+.circle2 {
+	background: white;
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.9),
+		rgba(255, 255, 255, 0.1)
+	);
+	height: 20rem;
+	width: 20rem;
+	border-radius: 50%;
+	border: 1px solid white;
+	position: absolute;
+}
+.circle1 {
+	top: 5%;
+	right: 15%;
+}
+.circle2 {
+	bottom: 5%;
+	left: 10%;
+}
+
+.dashboard {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+	background: linear-gradient(
+		to right bottom,
+		rgba(0, 0, 0, 0.7),
+		rgba(0, 0, 0, 0.3)
+	);
+	border-radius: 2rem;
+	border: 1px solid white;
+	box-shadow: 8px 8px 25px rgba(255, 255, 255, 0.9);
+}
+.link {
+	display: flex;
+	margin: 2rem 0;
+	padding: 1rem 5rem;
+	align-items: center;
+	/* flex-direction: column; */
+}
+.link h2 {
+	padding: 0 2rem;
+}
+.games {
+	flex: 2;
+}
+.dashboard h3,
+.dashboard h2,
+.dashboard p {
+	color: white;
+}
+.pro {
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.9),
+		rgba(255, 255, 255, 0.1)
+	);
+	border-radius: 2rem;
+	/* color: white; */
+	padding: 1rem;
+	border: 1px solid white;
+	display: flex;
+	position: relative;
+}
+.pro h2 {
+	width: 40%;
+	color: black;
+	font-weight: 600;
+}
+.pro img {
+	position: absolute;
+	top: 0;
+	left: 50%;
+}
+
+/*GAMES*/
+
+.status input {
+	background: linear-gradient(
+		to right top,
+		rgba(0, 0, 0, 0.3),
+		rgba(10, 10, 10, 0.5)
+	);
+	color: white;
+	width: 50%;
+	padding: 0.5rem;
+	border-radius: 2rem;
+	font-size: 1.2rem;
+}
+.status input:active {
+	border: 1px solid black;
+}
+.games {
+	margin: 5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	/* align-items: center; */
+}
+.card {
+	display: flex;
+	background: linear-gradient(
+		to left top,
+		rgba(255, 255, 255, 0.2),
+		rgba(255, 255, 255, 0.8)
+	);
+	border: 1px solid white;
+	border-radius: 2rem;
+	margin: 2rem 0;
+	padding: 2rem;
+	box-shadow: 6px 6px 20px rgba(150, 150, 150, 0.9);
+	justify-content: space-between;
+}
+.progress {
+	background-color: #ffffff;
+	background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+	width: 100%;
+	height: 25%;
+	border-radius: 1rem;
+	border: 1px solid white;
+	position: relative;
+	overflow: hidden;
+}
+.progress::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgb(0, 0, 0);
+	position: absolute;
+	right: 40%;
+}
+
+.card-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 60%;
+	/* text-align: center; */
+}
+.percentage {
+	font-weight: bold;
+	background-color: #5b6467;
+	background-image: linear-gradient(315deg, #2e3131 0%, #3b3d3f 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.status h1 {
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	background: linear-gradient(45deg, #5b6467, #a9aeb3, #5b6467, #a9aeb3);
+	background-size: 400%;
+	-webkit-animation: change 6s ease-in-out infinite;
+	animation: change 6s ease-in-out infinite;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 0.01rem #fff;
+	-webkit-text-fill-color: transparent;
+}
+
+@-webkit-keyframes change {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
+
+@keyframes change {
+	0% {
+		background-position: 0 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0 50%;
+	}
+}
